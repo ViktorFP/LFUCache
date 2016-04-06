@@ -10,7 +10,7 @@ public class Runner {
 		try {
 			cache = new LFUCache(4, 0.8f);
 			final String[] data = { "a", "b", "c", "d", "c", "d", "c", "c",
-					"c", "d", "d", "b", "b", "a", "a", "d", "c","e" };
+					"c", "d", "d", "b", "b", "a", "a", "d", "c", "e" };
 			for (String str : data) {
 				cache.put(str);
 			}

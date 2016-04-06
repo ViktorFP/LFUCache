@@ -63,7 +63,8 @@ public class LFUCache {
 			for (List<String> list : array) {
 				Iterator<String> iterator = list.listIterator();
 				while (iterator.hasNext()) {
-					iterator.next();
+					String entry = iterator.next();
+					cache.remove(entry);
 					iterator.remove();
 					value--;
 					if (value == 0) {
