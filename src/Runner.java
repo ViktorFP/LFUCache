@@ -9,7 +9,7 @@ public class Runner {
 		// ---set data to cache
 		LFUCache cache;
 		try {
-			cache = new LFUCache(4, 0.8f);
+			cache = new LFUCache(3, 0.8f);
 			final String[] data = { "a", "b", "c", "d", "c", "d", "c", "c",
 					"c", "d", "d", "b", "b", "a", "a", "d", "c", "e" };
 			for (String str : data) {
@@ -18,6 +18,7 @@ public class Runner {
 			// ---print all data---
 			List<String>[] arrayData = cache.getArray();
 			int i = -1;
+			System.out.println("----------lists-----------");
 			for (List<String> list : arrayData) {
 				i++;
 				for (Object str : list) {
@@ -25,7 +26,7 @@ public class Runner {
 				}
 			}
 			
-			System.out.println("--------------------------");
+			System.out.println("----------cache-----------");
 			for(Entry<String, Integer> entry:cache.getCache().entrySet()){
 				System.out.println(entry.getKey()+" "+entry.getValue());
 			}
