@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Map.Entry;
 
 import by.epamlab.cache.LFUCache;
 import by.epamlab.exceptions.DataException;
@@ -22,6 +23,11 @@ public class Runner {
 				for (Object str : list) {
 					System.out.println(str + " " + i);
 				}
+			}
+			
+			System.out.println("--------------------------");
+			for(Entry<String, Integer> entry:cache.getCache().entrySet()){
+				System.out.println(entry.getKey()+" "+entry.getValue());
 			}
 		} catch (DataException e) {
 			System.out.println(e.getMessage());

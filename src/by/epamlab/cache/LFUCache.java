@@ -57,6 +57,10 @@ public class LFUCache {
 		return array;
 	}
 
+	public Map<String, Integer> getCache() {
+		return cache;
+	}
+
 	private void checkSize() {
 		if (count == MAX_SIZE_CACHE) {
 			int value = DELETE_VALUE;
